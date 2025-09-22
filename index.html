@@ -134,13 +134,24 @@
     .hero-content .subtitle {
       font-size: 1.5rem;
       color: var(--accent);
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       opacity: 0.8;
+    }
+
+    .hero-content .location {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
     .hero-content .description {
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto 3rem;
       opacity: 0.9;
     }
@@ -185,10 +196,42 @@
       color: var(--dark);
     }
 
+    /* Core Competencies Section */
+    .competencies {
+      padding: 100px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .competencies-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .competency-tag {
+      background: var(--gradient);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
+    }
+
+    .competency-tag:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+    }
+
     /* Skills Section */
     .skills {
       padding: 100px 50px;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -205,7 +248,7 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
     }
@@ -243,10 +286,27 @@
 
     .skill-card h3 {
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 10px;
+      font-size: 1.3rem;
+    }
+
+    .skill-details {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-details h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .skill-details p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
     }
 
     .skill-tags {
@@ -256,25 +316,72 @@
     }
 
     .skill-tag {
-      background: var(--gradient);
-      color: white;
+      background: rgba(0, 212, 255, 0.2);
+      color: var(--primary);
       padding: 8px 16px;
       border-radius: 25px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 500;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 212, 255, 0.3);
     }
 
     .skill-tag:hover {
       transform: scale(1.1);
+      background: rgba(0, 212, 255, 0.3);
+    }
+
+    /* Experience Section */
+    .experience {
+      padding: 100px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(22, 33, 62, 0.2);
+    }
+
+    .experience-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 1px solid rgba(78, 205, 196, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .company-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .duration {
+      color: var(--primary);
+      font-weight: 600;
+      background: rgba(0, 212, 255, 0.2);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .job-title {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
     }
 
     /* Projects Section */
     .projects {
       padding: 100px 50px;
-      max-width: 1400px;
+      max-width: 1500px;
       margin: 0 auto;
-      background: rgba(22, 33, 62, 0.3);
     }
 
     .projects-grid {
@@ -304,7 +411,7 @@
     }
 
     .project-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       display: flex;
@@ -313,8 +420,9 @@
     }
 
     .project-type {
-      opacity: 0.8;
-      font-size: 0.9rem;
+      opacity: 0.9;
+      font-size: 1rem;
+      font-weight: 500;
     }
 
     .project-body {
@@ -324,6 +432,7 @@
     .project-description {
       margin-bottom: 1.5rem;
       opacity: 0.9;
+      line-height: 1.6;
     }
 
     .project-features {
@@ -332,9 +441,10 @@
     }
 
     .project-features li {
-      padding: 0.3rem 0;
+      padding: 0.5rem 0;
       position: relative;
       padding-left: 1.5rem;
+      opacity: 0.9;
     }
 
     .project-features li::before {
@@ -342,6 +452,7 @@
       position: absolute;
       left: 0;
       color: var(--accent);
+      font-size: 1.2rem;
     }
 
     .project-tech {
@@ -353,23 +464,86 @@
     .tech-badge {
       background: rgba(0, 212, 255, 0.2);
       color: var(--primary);
-      padding: 4px 12px;
+      padding: 6px 14px;
       border-radius: 15px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 500;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+    }
+
+    /* Achievements Section */
+    .achievements {
+      padding: 100px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .achievement-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(255, 107, 107, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--secondary);
+      box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+    }
+
+    .achievement-icon {
+      font-size: 3rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .achievement-title {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .achievement-list {
+      list-style: none;
+      text-align: left;
+    }
+
+    .achievement-list li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .achievement-list li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
     }
 
     /* Stats Section */
     .stats {
       padding: 80px 50px;
       text-align: center;
+      background: rgba(22, 33, 62, 0.3);
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -398,19 +572,61 @@
     .stat-label {
       color: var(--light);
       opacity: 0.8;
+      font-weight: 600;
+    }
+
+    /* Education Section */
+    .education {
+      padding: 80px 50px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .education-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 1px solid rgba(78, 205, 196, 0.2);
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: 0 15px 30px rgba(78, 205, 196, 0.2);
+    }
+
+    .degree {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .university {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .graduation-year {
+      color: var(--secondary);
+      font-weight: 600;
     }
 
     /* Contact Section */
     .contact {
       padding: 100px 50px;
       text-align: center;
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin: 3rem 0;
     }
@@ -430,15 +646,22 @@
     }
 
     .contact-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 1rem;
     }
 
-    .contact-link {
+    .contact-item h4 {
       color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-link {
+      color: var(--light);
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     .contact-link:hover {
@@ -461,14 +684,15 @@
       
       .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
       }
       
-      .hero, .skills, .projects, .contact {
+      .hero, .skills, .projects, .contact, .competencies, .experience, .achievements, .education {
         padding: 60px 20px;
       }
       
       .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       
       .section-title {
@@ -486,8 +710,22 @@
         justify-content: center;
       }
       
-      .skills-grid, .projects-grid {
+      .skills-grid, .projects-grid, .achievements-grid {
         grid-template-columns: 1fr;
+      }
+
+      .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .competencies-list {
+        gap: 0.5rem;
+      }
+
+      .competency-tag {
+        font-size: 0.9rem;
+        padding: 10px 16px;
       }
     }
 
@@ -518,6 +756,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Additional hover effects */
+    .skill-tag:hover,
+    .tech-badge:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -529,7 +773,8 @@
       <a href="#home" class="logo">Nagender.dev</a>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#competencies">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -539,11 +784,17 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content fade-in-up">
-      <h1>Elite Web Developer</h1>
-      <p class="subtitle">Crafting Digital Excellence</p>
+      <h1>Nagender Naroju</h1>
+      <p class="subtitle">Elite Web Developer</p>
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        Hyderabad, Telangana
+      </div>
       <p class="description">
-        4+ years of expertise building scalable web applications with modern technologies. 
-        Specializing in PHP, Laravel, and cloud deployments.
+        Dedicated Web Developer with 3+ years of experience in developing robust web applications 
+        using Laravel and modern PHP practices. Skilled in implementing advanced Laravel features 
+        including events, observers, and service-oriented architecture. Experienced in optimizing 
+        application performance through caching strategies, database indexing, and efficient coding practices.
       </p>
       <div class="cta-buttons">
         <a href="#contact" class="btn btn-primary">
@@ -558,73 +809,149 @@
     </div>
   </section>
 
+  <!-- Core Competencies Section -->
+  <section id="competencies" class="competencies">
+    <h2 class="section-title reveal">Core Competencies</h2>
+    <div class="competencies-list reveal">
+      <span class="competency-tag">Laravel Advanced Architecture</span>
+      <span class="competency-tag">Performance Optimization</span>
+      <span class="competency-tag">API Integrations</span>
+      <span class="competency-tag">Payment Gateways</span>
+      <span class="competency-tag">Event-Driven Development</span>
+      <span class="competency-tag">Repository Pattern</span>
+      <span class="competency-tag">Queue Management</span>
+      <span class="competency-tag">Database Optimization</span>
+      <span class="competency-tag">Observer Pattern</span>
+      <span class="competency-tag">Service Pattern</span>
+      <span class="competency-tag">Factory Pattern</span>
+    </div>
+  </section>
+
   <!-- Skills Section -->
   <section id="skills" class="skills">
-    <h2 class="section-title reveal">Technical Arsenal</h2>
+    <h2 class="section-title reveal">Technical Expertise</h2>
     
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <h3><i class="fas fa-code"></i> Backend Mastery</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Laravel 11</span>
-          <span class="skill-tag">CodeIgniter 3</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">MySQL</span>
+        <h3><i class="fas fa-server"></i> Backend Development</h3>
+        <div class="skill-details">
+          <h4>Languages:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+          </div>
+          <h4>Frameworks:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Laravel 11 (Advanced)</span>
+            <span class="skill-tag">CodeIgniter 3</span>
+            <span class="skill-tag">Livewire 3.0</span>
+          </div>
+          <h4>Architecture Patterns:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Repository Pattern</span>
+            <span class="skill-tag">Service Layer</span>
+            <span class="skill-tag">Factory Pattern</span>
+            <span class="skill-tag">Observer Pattern</span>
+          </div>
+          <h4>Laravel Advanced Features:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Events & Listeners</span>
+            <span class="skill-tag">Model Observers</span>
+            <span class="skill-tag">Service Container</span>
+            <span class="skill-tag">Dependency Injection</span>
+            <span class="skill-tag">Artisan Commands</span>
+            <span class="skill-tag">Queue Jobs</span>
+            <span class="skill-tag">Eloquent Relationships</span>
+          </div>
         </div>
       </div>
       
       <div class="skill-card reveal">
-        <h3><i class="fas fa-paint-brush"></i> Frontend Skills</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">jQuery</span>
-          <span class="skill-tag">Ajax</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">Livewire</span>
+        <h3><i class="fas fa-tachometer-alt"></i> Performance Optimization</h3>
+        <div class="skill-details">
+          <h4>Caching Systems:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Laravel Cache</span>
+            <span class="skill-tag">File Cache</span>
+            <span class="skill-tag">Database Cache</span>
+          </div>
+          <h4>Database Optimization:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Query Optimization</span>
+            <span class="skill-tag">Indexing Strategies</span>
+          </div>
+          <h4>Application Performance:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Query Caching</span>
+            <span class="skill-tag">Pagination</span>
+            <span class="skill-tag">Eager Loading</span>
+            <span class="skill-tag">Database Indexing</span>
+          </div>
         </div>
       </div>
       
       <div class="skill-card reveal">
-        <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Firebase</span>
-          <span class="skill-tag">Cloud Deploy</span>
-          <span class="skill-tag">Git</span>
+        <h3><i class="fas fa-plug"></i> API & Integration</h3>
+        <div class="skill-details">
+          <h4>API Development:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">RESTful APIs</span>
+          </div>
+          <h4>Third-party Integrations:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Stripe</span>
+            <span class="skill-tag">Twilio</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">WhatsApp Business API</span>
+          </div>
+          <h4>Authentication:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">JWT</span>
+            <span class="skill-tag">Laravel Sanctum</span>
+            <span class="skill-tag">Passport</span>
+          </div>
         </div>
       </div>
       
       <div class="skill-card reveal">
-        <h3><i class="fas fa-plug"></i> Integrations</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Stripe</span>
-          <span class="skill-tag">Twilio</span>
-          <span class="skill-tag">WhatsApp API</span>
-          <span class="skill-tag">Payment Gateways</span>
+        <h3><i class="fas fa-cloud"></i> Infrastructure & Deployment</h3>
+        <div class="skill-details">
+          <h4>Cloud Platforms:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS (EC2, S3)</span>
+          </div>
+          <h4>Server Management:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">GoDaddy</span>
+            <span class="skill-tag">cPanel</span>
+          </div>
+          <h4>Monitoring:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Application Debugging</span>
+          </div>
+          <h4>Version Control:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <span class="stat-number">4+</span>
-          <span class="stat-label">Years Experience</span>
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <h2 class="section-title reveal">Professional Experience</h2>
+    
+          <div class="experience-card reveal">
+      <div class="company-info">
+        <div>
+          <div class="company-name">Versatile IT Solutions</div>
+          <div class="job-title">Software Developer</div>
         </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Projects Done</span>
-        </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Industries</span>
-        </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Satisfaction</span>
-        </div>
+        <div class="duration">February 2022 – Present</div>
       </div>
     </div>
   </section>
@@ -640,22 +967,24 @@
             <i class="fas fa-home"></i>
             Assured Sum
           </div>
-          <div class="project-type">Home Loan Platform</div>
+          <div class="project-type">Home Loan Application</div>
         </div>
         <div class="project-body">
           <p class="project-description">
-            Complete user-bank home loan application platform with advanced integrations.
+            Developed comprehensive home loan platform facilitating user-bank interactions with advanced third-party integrations and real-time communication systems.
           </p>
           <ul class="project-features">
-            <li>WhatsApp API notifications</li>
-            <li>Firebase push notifications</li>
-            <li>Excel reporting system</li>
-            <li>Secure API architecture</li>
+            <li>Integrated third-party APIs (WhatsApp) for real-time status updates</li>
+            <li>Implemented Firebase push notifications</li>
+            <li>Created robust APIs for application functionality</li>
+            <li>Developed Excel reporting features</li>
+            <li>Built secure user-bank interaction system</li>
           </ul>
           <div class="project-tech">
             <span class="tech-badge">Laravel</span>
             <span class="tech-badge">WhatsApp API</span>
             <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Excel Integration</span>
           </div>
         </div>
       </div>
@@ -666,22 +995,24 @@
             <i class="fas fa-utensils"></i>
             Snapeats
           </div>
-          <div class="project-type">Food Deals Aggregator</div>
+          <div class="project-type">Food Deals Aggregation Platform</div>
         </div>
         <div class="project-body">
           <p class="project-description">
-            Multi-platform food deal aggregation with payment integration.
+            Created multi-application platform for food deals with comprehensive payment integration and location-based services.
           </p>
           <ul class="project-features">
-            <li>Multi-app deal aggregation</li>
-            <li>Stripe payment integration</li>
-            <li>Geo-location search</li>
-            <li>Real-time updates</li>
+            <li>Created multi-application platform for food deals</li>
+            <li>Implemented Stripe payment integration</li>
+            <li>Developed deal redemption system</li>
+            <li>Built restaurant favourites functionality</li>
+            <li>Implemented location-based search</li>
           </ul>
           <div class="project-tech">
             <span class="tech-badge">CodeIgniter</span>
             <span class="tech-badge">Stripe</span>
-            <span class="tech-badge">Geolocation</span>
+            <span class="tech-badge">Geolocation API</span>
+            <span class="tech-badge">Payment Gateway</span>
           </div>
         </div>
       </div>
@@ -692,22 +1023,52 @@
             <i class="fas fa-shopping-cart"></i>
             Tradex
           </div>
-          <div class="project-type">Marketplace Platform</div>
+          <div class="project-type">Used Products Marketplace</div>
         </div>
         <div class="project-body">
           <p class="project-description">
-            Comprehensive marketplace for used products with chat system.
+            Led development of comprehensive marketplace with advanced features including real-time communication and subscription services.
           </p>
           <ul class="project-features">
-            <li>Real-time chat system</li>
-            <li>Subscription products</li>
-            <li>Advanced admin panel</li>
-            <li>User verification</li>
+            <li>Led development of marketplace with advanced features</li>
+            <li>Implemented product chat functionality</li>
+            <li>Developed subscription-based product listings</li>
+            <li>Created comprehensive admin panel with data visualization</li>
+            <li>Built secure user verification system</li>
           </ul>
           <div class="project-tech">
             <span class="tech-badge">Laravel</span>
-            <span class="tech-badge">WebSocket</span>
-            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Real-time Chat</span>
+            <span class="tech-badge">Subscription System</span>
+            <span class="tech-badge">Admin Panel</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-title">
+            <i class="fas fa-star"></i>
+            Fansadda
+          </div>
+          <div class="project-type">Celebrity Requests Platform</div>
+        </div>
+        <div class="project-body">
+          <p class="project-description">
+            Designed application for personalized celebrity interactions with comprehensive management and notification systems.
+          </p>
+          <ul class="project-features">
+            <li>Designed application for personalized celebrity interactions</li>
+            <li>Developed user-friendly interface</li>
+            <li>Created comprehensive notification system</li>
+            <li>Built admin panel for request management</li>
+            <li>Implemented secure payment processing</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Laravel</span>
+            <span class="tech-badge">Notification System</span>
+            <span class="tech-badge">Admin Management</span>
+            <span class="tech-badge">Payment Integration</span>
           </div>
         </div>
       </div>
@@ -718,25 +1079,28 @@
             <i class="fas fa-heart"></i>
             SyncMee
           </div>
-          <div class="project-type">Dating & Networking</div>
+          <div class="project-type">Dating & Networking Application</div>
         </div>
         <div class="project-body">
           <p class="project-description">
-            Modern dating platform with intelligent matching algorithms.
+            Designed comprehensive dating and networking platform with intelligent matching algorithms and real-time communication features.
           </p>
           <ul class="project-features">
-            <li>Advanced matching system</li>
-            <li>Real-time chat</li>
-            <li>Profile verification</li>
-            <li>Social networking</li>
+            <li>Designed profile creation and verification system</li>
+            <li>Implemented matching algorithms based on user preferences</li>
+            <li>Developed real-time chat features</li>
+            <li>Created freemium model with tiered service levels</li>
+            <li>Built social networking capabilities</li>
           </ul>
           <div class="project-tech">
             <span class="tech-badge">Laravel</span>
-            <span class="tech-badge">Real-time</span>
-            <span class="tech-badge">Algorithm</span>
+            <span class="tech-badge">Matching Algorithm</span>
+            <span class="tech-badge">Real-time Chat</span>
+            <span class="tech-badge">Freemium Model</span>
           </div>
         </div>
       </div>
+      
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">
@@ -747,7 +1111,7 @@
         </div>
         <div class="project-body">
           <p class="project-description">
-            Comprehensive home services booking platform connecting customers with service providers.
+            Comprehensive home services booking platform connecting customers with service providers through advanced scheduling and management systems.
           </p>
           <ul class="project-features">
             <li>Service scheduling system</li>
@@ -761,17 +1125,85 @@
             <span class="tech-badge">Laravel</span>
             <span class="tech-badge">Booking System</span>
             <span class="tech-badge">Admin Panel</span>
+            <span class="tech-badge">Rating System</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements">
+    <h2 class="section-title reveal">Key Technical Achievements</h2>
+    
+    <div class="achievements-grid">
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <div class="achievement-title">Performance Optimization</div>
+        <ul class="achievement-list">
+          <li>Improved application response time by 60% through strategic caching implementation</li>
+          <li>Optimized database queries resulting in 85% faster page load times using indexing strategies</li>
+          <li>Implemented queue-based processing reducing server load during peak times by 45%</li>
+        </ul>
+      </div>
       
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="achievement-title">Laravel Architecture Excellence</div>
+        <ul class="achievement-list">
+          <li>Successfully implemented Repository Pattern across 2+ projects ensuring maintainable code</li>
+          <li>Designed event-driven architectures handling thousands of daily notifications efficiently</li>
+          <li>Built service layer architectures supporting multiple concurrent users</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Major Projects</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">60%</span>
+        <span class="stat-label">Performance Boost</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">85%</span>
+        <span class="stat-label">Query Optimization</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <h2 class="section-title reveal">Education</h2>
+    
+    <div class="education-card reveal">
+      <div class="degree">Bachelor of Science in Computer Science</div>
+      <div class="university">Vaageshwari Degree College, Satavahana University</div>
+      <div class="graduation-year">Graduated: 2019</div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2 class="section-title reveal">Let's Build Something Amazing</h2>
-    <p class="reveal">Ready to bring your vision to life? Let's discuss your next project.</p>
+    <p class="reveal">Ready to bring your vision to life? Let's discuss your next project and create something extraordinary together.</p>
     
     <div class="contact-grid">
       <div class="contact-item reveal">
@@ -793,10 +1225,18 @@
           +91 772-986-7647
         </a>
       </div>
+      
+      <div class="contact-item reveal">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4>Location</h4>
+        <span class="contact-link">Hyderabad, Telangana</span>
+      </div>
     </div>
     
-    <div class="reveal">
-      <a href="mailto:nagender5311naroju@gmail.com?subject=Project Inquiry" class="btn btn-primary">
+    <div class="reveal" style="margin-top: 2rem;">
+      <a href="mailto:nagender5311naroju@gmail.com?subject=Project Inquiry&body=Hi Nagender, I'm interested in discussing a web development project with you." class="btn btn-primary">
         <i class="fas fa-paper-plane"></i>
         Start a Project
       </a>
@@ -805,7 +1245,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Nagender Naroju. Crafted with <i class="fas fa-heart" style="color: var(--secondary);"></i> and passion.</p>
+    <p>&copy; 2025 Nagender Naroju. Crafted with <i class="fas fa-heart" style="color: var(--secondary);"></i> and passion for exceptional web development.</p>
   </footer>
 
   <script>
@@ -840,9 +1280,15 @@
     // Counter animation
     function animateCounters() {
       const counters = document.querySelectorAll('.stat-number');
+      const observedCounters = new Set();
+      
       counters.forEach(counter => {
-        const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
-        const suffix = counter.textContent.replace(/[0-9]/g, '');
+        if (observedCounters.has(counter)) return;
+        observedCounters.add(counter);
+        
+        const targetText = counter.textContent;
+        const target = parseInt(targetText.replace(/[^0-9]/g, ''));
+        const suffix = targetText.replace(/[0-9]/g, '');
         let current = 0;
         const increment = target / 50;
         
@@ -880,6 +1326,55 @@
         nav.style.background = 'rgba(26, 26, 46, 0.9)';
       }
     });
+
+    // Add active nav link highlighting
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Mobile menu toggle (if needed)
+    const createMobileMenu = () => {
+      if (window.innerWidth <= 768) {
+        const nav = document.querySelector('.nav-links');
+        const burger = document.createElement('div');
+        burger.classList.add('burger-menu');
+        burger.innerHTML = '<i class="fas fa-bars"></i>';
+        burger.style.cssText = `
+          display: block;
+          color: var(--primary);
+          font-size: 1.5rem;
+          cursor: pointer;
+        `;
+        
+        burger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+        });
+        
+        document.querySelector('.nav-container').appendChild(burger);
+      }
+    };
+
+    // Initialize mobile menu if on mobile
+    if (window.innerWidth <= 768) {
+      createMobileMenu();
+    }
   </script>
 </body>
 </html>
